@@ -2,7 +2,7 @@ import * as React from "react"
 import { StyleSheet, Image, View} from "react-native";
 import Button from "../components/button";
 import FormTextInput from "../components/FormTextInput";
-import imageLogo from "../../assets/images/ic_launcher_round.png";
+import imageLogo from "../../assets/images/ic_library.png";
 import colors from "../config/colors";
 import strings from "../config/strings";
 
@@ -40,6 +40,11 @@ export default class LoginScreen extends React.Component<{}, State>{
                     value={this.state.email}
                     onChangeText={this.handleEmailChange}
                     placeholder={strings.EMAIL_PLACEHOLDER}
+                    />
+                    <FormTextInput
+                    value={this.state.password}
+                    onChangeText={this.handlePasswordChange}
+                    placeholder={strings.PASSWORD_PLACEHOLDER}
                     />
                     <Button label={strings.LOGIN} onPress={this.handleLoginPress} />
                 </View>
